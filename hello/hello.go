@@ -2,9 +2,11 @@ package main
 
 import (
 	"connor/greetings"
-	"fmt"
 )
 
 func main() {
-	fmt.Println(greetings.Hello("Connor"))
+	// 调用 Hello 方法，返回 message
+	message := greetings.Hello("Connor")
+	// 打印 message 信息
+	print(message)
 }
