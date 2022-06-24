@@ -10,7 +10,7 @@ func main() {
 	log.SetPrefix("greetings: ")
 	log.SetFlags(0)
 	// 调用 Hello 方法，返回 message, err
-	message, err := greetings.Hello("")
+	message, err := greetings.Hello("Connor")
 	// 如果err不为nul，则表示有错误发生，将错误信息打印出来，并且退出程序
 	if err != nil {
 		log.Fatal(err)
