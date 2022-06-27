@@ -16,6 +16,24 @@ func Hello(name string) (string, error) {
 	return message, nil
 }
 
+// Hellos Hellos方法返回一个map，key为name，value为欢迎语
+func Hellos(names []string) (map[string]string, error) {
+
+	// 存name和message的map对象
+	messages := make(map[string]string)
+
+	// 遍历names
+	for _, name := range names {
+		message, err := Hello(name)
+		if err != nil {
+			return nil, err
+		}
+		// 对map赋值
+		messages[name] = message
+	}
+	return messages, nil
+}
+
 // init 在初始化的时候就会被调用
 func init() {
 	rand.Seed(time.Now().UnixNano())
